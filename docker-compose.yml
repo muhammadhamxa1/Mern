@@ -1,0 +1,11 @@
+services:
+    frontend:
+        build: ./front_end
+        ports:
+        - "3000:3000"
+        depends_on:
+        - backend
+    backend:
+      build: ./nodejs-express-mongodb
+      ports:
+      - "8001:8001"
